@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTest.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+           x:Name="GetWeatherBtn"
+           Text="Météo"
+           Clicked="GetWeatherButton_Clicker"
+           WidthRequest="150"
+           HeightRequest="50"
+           VerticalOptions="Start"
+           HorizontalOptions="Center" />
+            <Label VerticalOptions="Center" HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="City"></Span>
+                        <Span x:Name="temperature"></Span>
+                        <Span x:Name="winds"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
