@@ -4,8 +4,8 @@
              x:Class="AppTest.Page1">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Entry x:Name="Entree" Keyboard="Numeric"/>
-            <StackLayout Orientation="Horizontal">
+            <Entry x:Name="Entree" Keyboard="Numeric" Placeholder="Code Postale"/>
+            <StackLayout Orientation="Horizontal"  >
                 <Label Text="Ville : "/>
                 <Label x:Name="LabelCity" Text="{Binding City}"/>
             </StackLayout>
@@ -25,8 +25,8 @@
                 <Label Text="Visibilite : "/>
                 <Label  Text="{Binding visibility}"/>
             </StackLayout>
-            
-            <Button x:Name="GetWeatherBtn" Text="Meteo" Clicked="GetWeatherButton_Clicker" />
+
+            <Button x:Name="GetWeatherBtn" Text="Meteo" Clicked="GetWeatherButton_Clicker"  />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
