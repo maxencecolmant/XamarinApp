@@ -22,8 +22,8 @@ namespace AppTest {
         {
             Weather weather = await Services.WeatherService.GetWeather("93400") ;
             LabelCity.Text = weather.City;
-            //temperature.Text = weather.temperature;
-            //winds.Text = weather.wind;
+            LabelTemp.Text = weather.temperature;
+            LabelWind.Text = weather.wind;
         }
 
     }

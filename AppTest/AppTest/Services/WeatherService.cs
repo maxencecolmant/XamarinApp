@@ -12,7 +12,7 @@ namespace AppTest.Services
         const string key = "be05a05af20309aa8fc00a3ff1f4ca01"; // clef api meteo
         public static async Task<Weather> GetWeather(string zipCode)
         {
-            string querystring = $"{url}?zip={zipCode},fr&appid={key}&units=metrics"; // requette http vers l'api 
+            string querystring = $"{url}?zip={zipCode},fr&appid={key}&units=metric"; // requette http vers l'api 
             var result =  await DataServices.GetDataFromService(querystring).ConfigureAwait(false);//recupere les données de l'api
             if (result != null)
             {
