@@ -21,9 +21,9 @@ namespace AppTest {
         public async void GetWeatherButton_Clicker(object sender , EventArgs e)
         {
             Weather weather = await Services.WeatherService.GetWeather("93400") ;
-            City.Text = weather.City;
-            temperature.Text = weather.temperature;
-            winds.Text = weather.wind;
+            LabelCity.Text = weather.City;
+            //temperature.Text = weather.temperature;
+            //winds.Text = weather.wind;
         }
 
     }

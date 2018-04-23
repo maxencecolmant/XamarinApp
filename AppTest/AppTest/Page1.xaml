@@ -3,24 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppTest.Page1">
     <ContentPage.Content>
-        <StackLayout>
-            <Button
-           x:Name="GetWeatherBtn"
-           Text="Météo"
-           Clicked="GetWeatherButton_Clicker"
-           WidthRequest="150"
-           HeightRequest="50"
-           VerticalOptions="Start"
-           HorizontalOptions="Center" />
-            <Label VerticalOptions="Center" HorizontalOptions="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span x:Name="City"></Span>
-                        <Span x:Name="temperature"></Span>
-                        <Span x:Name="winds"></Span>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ville : "/>
+                <Label x:Name="LabelCity"/>
+            </StackLayout>
+            
         </StackLayout>
+        <Button x:Name="GetWeatherBtn" Text="Meteo" Clicked="GetWeatherButton_Clicker" />
     </ContentPage.Content>
 </ContentPage>
