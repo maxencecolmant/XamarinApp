@@ -14,16 +14,18 @@ namespace AppTest {
 		public Page1 ()
 		{
 			InitializeComponent ();
+            BindingContext = new Weather(); 
 		}
 
        
 
         public async void GetWeatherButton_Clicker(object sender , EventArgs e)
         {
-            Weather weather = await Services.WeatherService.GetWeather("93400") ;
-            LabelCity.Text = weather.City;
-            LabelTemp.Text = weather.temperature;
-            LabelWind.Text = weather.wind;
+            Weather weather = await Services.WeatherService.GetWeather(Entree.Text) ;
+            BindingContext = weather; 
+            //LabelCity.Text = weather.City;
+            //LabelTemp.Text = weather.temperature;
+            //LabelWind.Text = weather.wind;
         }
 
     }

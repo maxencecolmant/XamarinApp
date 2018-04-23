@@ -4,34 +4,28 @@
              x:Class="AppTest.Page1">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
+            <Entry x:Name="Entree" Keyboard="Numeric"/>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Ville : "/>
-                <Label x:Name="LabelCity"/>
+                <Label x:Name="LabelCity" Text="{Binding City}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Temperature : "/>
-                <Label x:Name="LabelTemp"/>
+                <Label  Text="{Binding temperature}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Vent : "/>
-                <Label x:Name="LabelWind"/>
+                <Label  Text="{Binding wind}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Humidite : "/>
-                <Label x:Name="LabelHumidite"/>
+                <Label  Text="{Binding humididy}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Visibilite : "/>
-                <Label x:Name="LabelVisibilite"/>
+                <Label  Text="{Binding visibility}"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Leve de soleil : "/>
-                <Label x:Name="LabelSunRise"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="coucher de soleil : "/>
-                <Label x:Name="LabelSun"/>
-            </StackLayout>
+            
             <Button x:Name="GetWeatherBtn" Text="Meteo" Clicked="GetWeatherButton_Clicker" />
         </StackLayout>
     </ContentPage.Content>
